@@ -1,27 +1,34 @@
 'use strict';
 let user = new Object();
-user.id;
+user.id = 1;
 user.name = "something text";
 user.password = "something password";
 user.authorization = false; /* идентификатор авторизации пользователя */
 
+console.log(user);
+
 let publish = new Object();
-publish.id;
-publish.userId = "user id"; /* поле для хранения связи пользователя (передаем поле id объекта user) с публикацией */
+publish.id = 1;
+publish.userId = 1; /* поле для хранения связи пользователя (передаем поле id объекта user) с публикацией */
 publish.title = "something text";
 publish.description = "something text";
-publish.dateTime;
-publish.like = true;
+publish.like = false;
+
+console.log(publish);
+
 
 let comment = new Object();
-comment.id;
+comment.id = 1;
 comment.text = "something text";
-comment.publishId = "publish id";/* поле для хранения связи публикации (передаем поле id объекта publish) с комментарием */
-comment.userId = "user id"; /* поле для хранения связи пользователя (передаем поле id объекта user) с комментарием */
+comment.publishId = 1;/* поле для хранения связи публикации (передаем поле id объекта publish) с комментарием */
+comment.userId = 1; /* поле для хранения связи пользователя (передаем поле id объекта user) с комментарием */
 
-let publishes = [publish, publish];
+console.log(comment);
 
-function addPublish(publish, publishes) {
+
+let publishes = [];
+
+function addPublish(publish) {
     publishes.push(publish);
 }
 
@@ -45,3 +52,5 @@ function changePublishLike(publishes, idPublish) {
         }
     }
 }
+
+
