@@ -13,12 +13,17 @@ publish.imageURL = "http://placekitten.com/500/500";
 publish.description = "something description";
 publish.like = false;
 
-let comment = new Object();
-comment.id = 1;
-comment.text = "something text";
-comment.publishId = 1;/* поле для хранения связи публикации (передаем поле id объекта publish) с комментарием */
-comment.userId = 1; /* поле для хранения связи пользователя (передаем поле id объекта user) с комментарием */
-
+// let comment = new Object();
+// comment.id = 1;
+// comment.text = "something text";
+// comment.publishId = 1;/* поле для хранения связи публикации (передаем поле id объекта publish) с комментарием */
+// comment.userId = 1; /* поле для хранения связи пользователя (передаем поле id объекта user) с комментарием */
+let comment = {
+    id : 1,
+    text : "something text",
+    publishId : 1,
+    userId : 1
+};
 let publishes = [];
 
 function addPublish(publish) {
@@ -70,7 +75,7 @@ function createCommentElement(comment) {
     att.value = "py-2 pl-3";
     element.setAttributeNode(att);
     element.classList.add('new-comment');
-    element.innerHTML = `<a href="#" class="muted">${name}</a> <p> ${comment.text} </p>`;
+    element.innerHTML = `<a href="#" class="muted">${user.name}</a> <p> ${comment.text} </p>`;
     return element;
 }
 
@@ -126,8 +131,7 @@ function createPostElement(publish) {
                 <a href="#" class="muted">someusername</a>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum ad est cumque nulla voluptatem enim voluptas minima illum quis! Voluptatibus dolorem minus tempore aliquid corrupti nesciunt, obcaecati fuga natus officiis.</p>
               </div>
-              <input type="text" size="20" name="title"/>
-              <button class='comment-button' onclick="addComment()">Add comment</button>
+              <button class='comment-button' onclick="addComment(commentElement)">Add comment</button>
             </div>
             <!-- comments section end -->
           </div>`;
