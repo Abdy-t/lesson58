@@ -12,21 +12,6 @@
     justify-content: center;
     align-items: center;
 }
-/*button.change {*/
-/*    font-size: 24px;*/
-/*    margin-bottom: 20px;*/
-/*}*/
-/*footer#foot {*/
-/*    margin-bottom: 20px;*/
-/*}*/
-
-/*.redColor {*/
-/*    color: red;*/
-/*}*/
-/*.whiteColor {*/
-/*    color: white;*/
-/*}*/
-
-/*.boldStyle {*/
-/*    font-weight: bold;*/
-/*}*/
+.dblLike {
+    font-size: 15px;
+}
